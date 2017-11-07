@@ -20,7 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->integer('role')->default(0); # 0 - Client | 1 - Support or Supervisor | 2 - Evaluator | 3- Admin
             $table->string('avatar')->default('default.png');
-            $table->string('puesto');
+            $table->string('departamento');
             $table->string('sucursal');
             $table->string('password');
             $table->rememberToken();

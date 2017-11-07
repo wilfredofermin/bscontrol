@@ -5,7 +5,7 @@
 @section('class-page','section text-center section-landing')
 @section('content')
 
-    <div class="header header-filter" style="background-image: url('{{asset('img/bgbs.jpg')}}');">
+    <div class="header header-filter" style="background-image: url('{{asset('img/bgbs2.jpg')}}');">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -42,9 +42,7 @@
                         </ul>
                     </div>
                 </div>
-
             @endif
-
             <div class="section text-center section-landing">
                 <div class="row">
                     <div class="col-md-4">
@@ -52,17 +50,26 @@
                             <div class="icon icon-primary">
                                 <i class="material-icons">chat</i>
                             </div>
-                            <h4 class="info-title">First Feature</h4>
-                            <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
+                            <h4 class="info-title">Sistema administrativo</h4>
+                            <p>Solicita los que necesites. Creacion de usuario, permisos,reportes y otros .</p>
+                            <span class="label label-default">CBS</span>
+                            <span class="label label-primary">CRM</span>
+                            <span class="label label-success">Simetrica</span>
+                            <span class="label label-info">ABC Software</span>
+                            <span class="label label-info">BS Control</span>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="info">
                             <div class="icon icon-success">
-                                <i class="material-icons">verified_user</i>
+                                <i class="material-icons">important_devices</i>
                             </div>
-                            <h4 class="info-title">Second Feature</h4>
-                            <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
+                            <h4 class="info-title">Infraestructura IT</h4>
+                            <p>Reporta inconvenientes con equipos,creacion de acceso de windows,correo electronico,telefonia, permisos a paginas web y otras asistencias.</p>
+                            <span class="label label-default">Hardware</span>
+                            <span class="label label-success">Correo Electronico</span>
+                            <span class="label label-info">Seguridad Informatica</span>
+                            <span class="label label-warning">Redes y Telecomunicaciones</span>
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -70,11 +77,14 @@
                             <div class="icon icon-danger">
                                 <i class="material-icons">fingerprint</i>
                             </div>
-                            <h4 class="info-title">Third Feature</h4>
-                            <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
+                            <h4 class="info-title">Permiso de acceso</h4>
+                            <p>Podras reportar todo incovenientes relacionado con el acceso mediante al sistema de verificacion.</p>
+                            <span class="label label-default">Lector Biometrico</span>
+                            <span class="label label-default">Socios</span>
+                            <span class="label label-success">Empleados</span>
+                            <span class="label label-info">Day pass</span>
                         </div>
                     </div>
-                </div>
 
                 <div class="section landing-section">
                     <hr width="50%">{{--Linea separador--}}

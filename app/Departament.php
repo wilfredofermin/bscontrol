@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Puestos extends Model
+class Departament extends Model
 {
     //
 }

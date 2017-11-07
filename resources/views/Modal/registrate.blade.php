@@ -22,7 +22,7 @@
                                 <span class="input-group-addon">
                                     <i class="material-icons">face</i>
                                 </span>
-                                <div class="form-group is-empty"><input type="text" class="form-control" placeholder=" Nombre completo..." name="email" value="{{ old('name') }}" required><span class="material-input"></span></div>
+                                <div class="form-group is-empty"><input type="text" class="form-control" placeholder=" Nombre completo..." name="name" value="{{ old('name') }}" required><span class="material-input"></span></div>
                             </div>
                             <div class="input-group">
                                 <span class="input-group-addon">
@@ -40,28 +40,26 @@
                                 <span class="input-group-addon">
                                     <i class="material-icons">lock_outline</i>
                                 </span>
-                                <div class="form-group is-empty"><input type="password" placeholder="Confirmar Password..." class="form-control" name="password" required><span class="material-input"></span></div>
+                                <div class="form-group is-empty"><input type="password" placeholder="Confirmar Password..." class="form-control" name="password_confirmation" required><span class="material-input"></span></div>
                             </div>
                             <div class="input-group">
                                 <span class="input-group-addon">
                                    <i class="material-icons"rel="tooltip" title=Sucursal data-placement="bottom" data-html="true" >store</i>
                                 </span>
-                                <select class="selectpicker"  header="Select a condiment" data-style="btn-btn-info" data-width="100%">
-                                    <option>NACO</option>
-                                    <option>BELLA VISTA</option>
-                                    <option>ARROYO HONDO</option>
-                                    <option>SANTIAGO</option>
-                                </select>
+                                <select class="selectpicker" name="sucursal" data-style="btn-btn-info" data-width="100%">
+                                        @foreach($subsidiaries as $sucursal)
+                                            <option value="{{$sucursal->name}}">{{$sucursal->name}}</option>
+                                        @endforeach
+                                 </select>
                             </div>
                             <div class="input-group">
                                 <span class="input-group-addon">
                                    <i class="material-icons" rel="tooltip" title=Departamento data-placement="bottom" data-html="true">work</i>
                                 </span>
-                                <select class="selectpicker"  header="Select a condiment" data-style="btn-btn-info" data-width="100%">
-                                    <option>COMPUTOS</option>
-                                    <option>CARGOS AUTOMATIVO</option>
-                                    <option>CONTABILIDAD</option>
-                                    <option>MERCADEO</option>
+                                <select class="selectpicker" name="departamento" data-style="btn-btn-info" data-width="100%">
+                                    @foreach($departaments as $departamento)
+                                        <option value="{{$departamento->name}}">{{$departamento->name}}</option>
+                                    @endforeach
                                 </select>
                             </div>
 

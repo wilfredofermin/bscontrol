@@ -18,7 +18,7 @@ class UsersTableSeeder extends Seeder
             'email' => 'm.mejia@clubbodyshop.com',
             'role'=>1,
             'sucursal'=>'Naco',
-            'puesto'=>'Recursas Humanos',
+            'Departamento'=>'Recursas Humanos',
             'password' => bcrypt('12345'),
         ]);
         User::create([
@@ -27,7 +27,7 @@ class UsersTableSeeder extends Seeder
             'email' => 'w.fermin@clubbodyshop.com',
             'role'=>1,
             'sucursal'=>'Naco',
-            'puesto'=>'Encargado de IT',
+            'Departamento'=>'Computos',
             'password' => bcrypt('12345'),
         ]);
         User::create([
@@ -36,7 +36,7 @@ class UsersTableSeeder extends Seeder
             'email' => 'n.burgos@clubbodyshop.com',
             'role'=>1,
             'sucursal'=>'Naco',
-            'puesto'=>'Gerente Tecnologia',
+            'Departamento'=>'Computos',
             'password' => bcrypt('12345'),
         ]);
     }

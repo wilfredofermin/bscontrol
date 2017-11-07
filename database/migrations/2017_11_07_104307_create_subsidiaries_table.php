@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSocursalesTable extends Migration
+class CreateSubsidiariesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class CreateSocursalesTable extends Migration
      */
     public function up()
     {
-        Schema::create('socursales', function (Blueprint $table) {
+        Schema::create('subsidiaries', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('estado')->defualt(1);
+            $table->string('name');
             $table->timestamps();
         });
     }
@@ -26,6 +28,6 @@ class CreateSocursalesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('socursales');
+        Schema::dropIfExists('subsidiaries');
     }
 }
