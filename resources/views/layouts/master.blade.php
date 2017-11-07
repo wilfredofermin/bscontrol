@@ -25,6 +25,9 @@
 
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="{{asset('css/demo.css')}}" rel="stylesheet" />
+
+    <!-- Bootstrap Select Dropdown -->
+    <link href="{{asset('css/bootstrap-select.min.css')}}" rel="stylesheet"/>
 <body class="@yield('class-page')">
 
 
@@ -60,9 +63,14 @@
                             <a href="#" class="btn btn-primary btn-round" data-toggle="modal" data-target="#myModal">
                                 <i class="material-icons">verified_user</i> Acceso
                             </a>
+                            <a href="#" class="btn btn-primary btn-round" data-toggle="modal" data-target="#myModalRegistro">
+                                <i class="material-icons">person_add</i> Registrate
+                            </a>
+                        <!--
                             <a href="{{ route('register') }}" class="btn btn-primary btn-round">
                                 <i class="material-icons">person_add</i> Registrate
                             </a>
+                            -->
                             @endauth
                     </div>
                 @endif
@@ -120,8 +128,11 @@
 
 <!-- Control Center for Material Kit: activating the ripples, parallax effects, scripts from the example pages etc -->
 <script src="{{asset('js/material-kit.js')}}" type="text/javascript"></script>
+{{--Bootstrap Dropdown Select--}}
+<script src="{{asset('js/bootstrap-select.min.js')}}" type="text/javascript"></script>
 <!-- Inicio Modal -->
 @include('modal.acceso')
+@include('modal.registrate')
         <!-- Fin Modal -->
 <script>
     $(function(){
