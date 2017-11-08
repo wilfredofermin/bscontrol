@@ -6,7 +6,7 @@
     <link rel="icon" type="image/png" href="{{asset('img/favicon.png')}}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-    <title>@yield('title','App Shop')</title>
+    <title>@yield('title','BSCONTROL')</title>
 
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+
 
     <!-- CSS Files -->
     <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet" />
@@ -80,7 +82,6 @@
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
-
 <div class="wrapper">
     @yield('content')
 </div>
@@ -116,23 +117,29 @@
 
 </body>
 <!--   Core JS Files   -->
+
 <script src="{{asset('js/jquery.min.js')}}" type="text/javascript"></script>
 <script src="{{asset('js/bootstrap.min.js')}}" type="text/javascript"></script>
 <script src="{{asset('js/material.min.js')}}"></script>
-
 <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
 <script src="{{asset('js/nouislider.min.js')}}" type="text/javascript"></script>
-
+{{--Bootstrap Notify--}}
+<script src="{{asset('js/bootstrap-notify.js')}}" type="text/javascript"></script>
 <!--  Plugin for the Datepicker, full documentation here: http://www.eyecon.ro/bootstrap-datepicker/ -->
 <script src="{{asset('js/bootstrap-datepicker.js')}}" type="text/javascript"></script>
 
 <!-- Control Center for Material Kit: activating the ripples, parallax effects, scripts from the example pages etc -->
 <script src="{{asset('js/material-kit.js')}}" type="text/javascript"></script>
+
+<!-- Dashboard del sistema-->
+<script src="{{asset('js/material-dashboard.js')}}" type="text/javascript"></script>
 {{--Bootstrap Dropdown Select--}}
 <script src="{{asset('js/bootstrap-select.min.js')}}" type="text/javascript"></script>
+
 <!-- Inicio Modal -->
 @include('modal.acceso')
 @include('modal.registrate')
+@include('modal.tutorial')
         <!-- Fin Modal -->
 <script>
     $(function(){
@@ -163,7 +170,6 @@
         });
     });
 </script>
-
 <script>
 
     $().ready(function(){
@@ -173,5 +179,25 @@
     });
 
 </script>
+<script>
+    $(document).ready(function(){
+        autoPlayYouTubeModal();
+    });
+</script>
+<script type="text/javascript">
+    function autoPlayYouTubeModal() {
+        var trigger = $("body").find('[data-toggle="modal"]');
+        trigger.click(function () {
+            var theModal = $(this).data("target"),
+                videoSRC = $(this).attr("data-theVideo"),
+                videoSRCauto = videoSRC + "?autoplay=1";
+            $(theModal + ' iframe').attr('src', videoSRCauto);
+            $(theModal + ' button.close').click(function () {
+                $(theModal + ' iframe').attr('src', videoSRC);
+            });
+        });
+    }
+</script>
+
 
 </html>

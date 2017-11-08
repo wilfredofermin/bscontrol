@@ -22,7 +22,7 @@
                                 <span class="input-group-addon">
                                     <i class="material-icons">email</i>
                                 </span>
-                                <div class="form-group is-empty"><input type="email" class="form-control" placeholder=" Correo electronico..." name="email" value="{{ old('email') }}" required><span class="material-input"></span></div>
+                                <div class="form-group is-empty"><input type="email" class="form-control" placeholder=" Correo electronico..." required autofocus name="email" value="{{ old('email') }}" ><span class="material-input"></span></div>
                             </div>
 
                             <div class="input-group">
@@ -48,7 +48,7 @@
                             </div> -->
                         </div>
                         <div  class="footer text-center">
-                            <button type="submit"  class="btn btn-primary btn-round">
+                            <button type="submit"  class="btn btn-primary btn-raised">
                                 <i class="material-icons">done</i> ACCESAR
                             </button>
                         </div>

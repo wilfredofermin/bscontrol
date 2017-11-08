@@ -12,7 +12,7 @@
                     <div class="col-md-12">
                         <div class="card card-signup">
                         <div class="header header-primary text-center">
-                            <img src="{{asset('img/add-user.png')}}" class="img-fluid" alt="Responsive image">
+                            <img src="{{asset('img/add-user.png')}}" width="24px" class="img-fluid" alt="Responsive image">
                             <h4>FORMULARIO DE REGISTRO</h4>
 
                         </div>
@@ -62,12 +62,9 @@
                                     @endforeach
                                 </select>
                             </div>
-
-
-
                         </div>
                         <div  class="footer text-center">
-                            <button type="submit"  class="btn btn-primary btn-round">
+                            <button type="submit"  class="btn btn-primary btn-raised">
                                 <i class="material-icons">done</i> ACCESAR
                             </button>
                         </div>
@@ -78,7 +75,7 @@
             </div>
             <div class="modal-footer">
                 <!--<button type="button" class="btn btn-default btn-simple">Nice Button</button>-->
-                <button type="button" class="btn btn-danger btn-simple" data-dismiss="modal">Cerrar<div class="ripple-container"><div class="ripple ripple-on ripple-out" style="left: 46.5781px; top: 15px; background-color: rgb(244, 67, 54); transform: scale(8.5);"></div></div></button>
+                <button type="button" class="btn btn-danger btn-simple" data-dismiss="modal">Cerrar</button>
             </div>
         </div>
     </div>

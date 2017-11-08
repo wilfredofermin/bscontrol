@@ -11,17 +11,20 @@
                 <div class="col-md-12">
                     <h1 class="title">BSCONTROL</h1>
                     <h5 class="description">Sistema de servicios variados</h5>
-                    <a href="#" id="tourTutorial" class="btn btn-danger btn-raised btn-lg" >
+                    <!-- Button trigger modal -->
+                    <a href="#" class="btn btn-danger btn-raised btn-lg" data-toggle="modal" data-target="#myModalTutorial" id="tourTutorial" data-theVideo="http://www.youtube.com/embed/loFtozxZG0s" >
                         <i class="fa fa-play" ></i> Como funciona?
                     </a>
+                    <!--
                     <a href="#" id="tourIntro" class="btn btn-success btn-raised btn-lg" >
                         <i class="fa fa-bus"></i> Inicia un demo
                     </a>
+                    -->
                 </div>
             </div>
         </div>
     </div>
-
+    <br>
     <div class="main main-raised">
         <div class="section">
             {{--Mensaje de error--}}
@@ -52,11 +55,7 @@
                             </div>
                             <h4 class="info-title">Sistema administrativo</h4>
                             <p>Solicita los que necesites. Creacion de usuario, permisos,reportes y otros .</p>
-                            <span class="label label-default">CBS</span>
-                            <span class="label label-primary">CRM</span>
-                            <span class="label label-success">Simetrica</span>
-                            <span class="label label-info">ABC Software</span>
-                            <span class="label label-info">BS Control</span>
+
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -66,10 +65,6 @@
                             </div>
                             <h4 class="info-title">Infraestructura IT</h4>
                             <p>Reporta inconvenientes con equipos,creacion de acceso de windows,correo electronico,telefonia, permisos a paginas web y otras asistencias.</p>
-                            <span class="label label-default">Hardware</span>
-                            <span class="label label-success">Correo Electronico</span>
-                            <span class="label label-info">Seguridad Informatica</span>
-                            <span class="label label-warning">Redes y Telecomunicaciones</span>
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -79,10 +74,6 @@
                             </div>
                             <h4 class="info-title">Permiso de acceso</h4>
                             <p>Podras reportar todo incovenientes relacionado con el acceso mediante al sistema de verificacion.</p>
-                            <span class="label label-default">Lector Biometrico</span>
-                            <span class="label label-default">Socios</span>
-                            <span class="label label-success">Empleados</span>
-                            <span class="label label-info">Day pass</span>
                         </div>
                     </div>
 
