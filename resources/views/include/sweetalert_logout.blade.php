@@ -6,11 +6,11 @@
     function salir () {
 
         swal({
-            title: 'Saliendo del sistema',
+            title: 'Saliendo de BSCONTROL',
             text: "Esta seguro de cerrar la aplicacion ?",
             type: 'warning',
             showCancelButton: true,
-            confirmButtonColor: '#2E2EFE',
+            confirmButtonColor: '#9C27B0',
             cancelButtonColor: '#d33',
             confirmButtonText: 'Si, quiero salir !',
             confirmButtonClass: 'btn btn-raised btn-success',

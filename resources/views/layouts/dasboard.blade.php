@@ -20,6 +20,9 @@
     <!--  CSS for Demo Purpose, don't include it in your project     -->
     <link href="{{asset('assets/css/demo.css')}}" rel="stylesheet" />
 
+    <!-- SweetAlert2 |https://cdn.jsdelivr.net/sweetalert2/6.6.2/sweetalert2.css -->
+    <link rel="stylesheet" href="{{asset('css/sweetalert2.css')}}">
+
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
@@ -29,11 +32,12 @@
 <div class="wrapper">
     <div class="sidebar" data-color="purple" data-image="{{asset('assets/img/sidebar-1.jpg')}}">
         <div class="logo">
-            <a href="http://www.creative-tim.com" class="simple-text">
-                BSCONTROL 1.0
+            <div align="center"><img src="{{asset('img/logo-bodyshop.PNG')}}"  rel="tooltip" title=BSCONTROL data-placement="bottom" WIDTH="120px" data-html="true"></div>
+            <a href="{{url('/home')}}" class="simple-text">
+                <h4><span class="tim-note"></span>BSCONTROL</h4>
             </a>
         </div>
-
+        <!--MENU DE OPCIONES-->
         <div class="sidebar-wrapper">
             <ul class="nav">
 
@@ -82,6 +86,7 @@
 
             </ul>
         </div>
+
     </div>
 
     <div class="main-panel">
@@ -120,17 +125,29 @@
 
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                <i class="material-icons">person</i> {{ Auth::user()->name }} <span class="caret"></span>
+                                <img src="{{asset('img/'.Auth::user()->avatar)}}" id="avatarImage" width="24px" class="img-circle" alt="User Image" >
+                                {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
 
                             <ul class="dropdown-menu" role="menu">
                                 <li>
+                                    <a href="user.html">
+                                        <i class="material-icons">person</i> PERFIL
+                                    </a>
+                                </li>
+                                <hr width="70%">
+                                <li>
+                                    <a id='salir' href="javascript:void(0)" class="btn btn-raised btn-danger"><i class="fa fa-power-off" aria-hidden="true"></i> Salir<div class="ripple-container"></div></a>
+                                    <!--
                                     <a href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                     document.getElementById('logout-form').submit();">
-                                        Salir
+                                        <i class="material-icons">exit_to_app</i> SALIR
                                     </a>
-
+                                      -->
+                                        <!--SweetAlert2-->
+                                    @include('include.sweetalert_logout')
+                                    <!--Cuando es confirmado llamo este formulario desde el SweetAlert mediante el id="logout-form"-->
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         {{ csrf_field() }}
                                     </form>
@@ -139,16 +156,8 @@
                         </li>
 
                     </ul>
-                    <!--BUSCADOR -->
-                    <form class="navbar-form navbar-right" role="search">
-                        <div class="form-group  is-empty">
-                            <input type="text" class="form-control" placeholder="Search">
-                            <span class="material-input"></span>
-                        </div>
-                        <button type="submit" class="btn btn-white btn-round btn-just-icon">
-                            <i class="material-icons">search</i><div class="ripple-container"></div>
-                        </button>
-                    </form>
+                    <!-- Aqui el buscardo-->
+
                 </div>
             </div>
         </nav>
@@ -176,6 +185,9 @@
 
 <!--  Notifications Plugin    -->
 <script src="{{asset('assets/js/bootstrap-notify.js')}}"></script>
+
+{{--SweeAlert2 | https://cdn.jsdelivr.net/sweetalert2/6.6.2/sweetalert2.js --}}
+<script src="{{asset('js/sweetalert2.js')}}"></script>
 
 <!--  Google Maps Plugin    -->
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
