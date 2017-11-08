@@ -61,7 +61,9 @@
                 @if (Route::has('login'))
                     <div class="top-right links">
                         @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ url('/home') }}" class="btn btn-primary btn-round">
+                            <i class="material-icons">dashboard</i> Dashboard
+                        </a>
                         @else
                             <a href="#" class="btn btn-primary btn-round" data-toggle="modal" data-target="#myModal">
                                 <i class="material-icons">verified_user</i> Acceso
@@ -137,8 +139,8 @@
 {{--Bootstrap Dropdown Select--}}
 <script src="{{asset('js/bootstrap-select.min.js')}}" type="text/javascript"></script>
 
-<!-- Inicio Modal -->
-@include('modal.acceso')
+<!-- Inimodalodal -->
+@inclmodalmodal.acceso')
 @include('modal.registrate')
 @include('modal.tutorial')
         <!-- Fin Modal -->

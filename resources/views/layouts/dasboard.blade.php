@@ -42,13 +42,13 @@
             <ul class="nav">
 
                 <li class="active">
-                    <a href="/">
+                    <a href="{{asset('/home')}}">
                         <i class="material-icons">dashboard</i>
                         <p>Dashboard</p>
                     </a>
                 </li>
                 <li>
-                    <a href="{{url('')}}">
+                    <a href="{{url('home/solicitud')}}">
                         <i class="material-icons">assignment_turned_in</i>
                         <p>Solicitudes</p>
                     </a>
@@ -159,7 +159,6 @@
                                 </li>
                             </ul>
                         </li>
-
                     </ul>
                     <!-- Aqui el buscardo-->
                 </div>
@@ -173,8 +172,6 @@
 
     </div>
 </div>
-
-</body>
 <!--   Core JS Files   -->
 <script src="{{asset('assets/js/jquery-3.2.1.min.js')}}" type="text/javascript"></script>
 <script src="{{asset('assets/js/bootstrap.min.js')}}" type="text/javascript"></script>
@@ -212,3 +209,4 @@
 
     });
 </script>
+</body>
