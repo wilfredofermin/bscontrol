@@ -19,7 +19,7 @@
             onclick=event.preventDefault();
             document.getElementById('logout-form').submit();
             swal(
-                    'Saliendo!',
+                    'BSCONTROL...Saliendo!',
                     'HAZTA LUEGO.. {{Auth::user()->name}} !!' ,
                     'success'
             )

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="utf-8" />
     <link rel="apple-touch-icon" sizes="76x76" href="{{asset('img/apple-icon.png')}}" />
@@ -49,10 +49,11 @@
                 </li>
                 <li>
                     <a href="{{url('')}}">
-                        <i class="material-icons">person</i>
-                        <p>User Profile</p>
+                        <i class="material-icons">assignment_turned_in</i>
+                        <p>Solicitudes</p>
                     </a>
                 </li>
+                <!--
                 <li>
                     <a href="{{url('')}}">
                         <i class="material-icons">content_paste</i>
@@ -83,7 +84,7 @@
                         <p>Notifications</p>
                     </a>
                 </li>
-
+                -->
             </ul>
         </div>
 
@@ -114,11 +115,15 @@
                                 <span class="notification">5</span>
                                 <p class="hidden-lg hidden-md">Notifications</p>
                             </a>
-                            <ul class="dropdown-menu">
+                            <ul class="dropdown-menu" role="menu">
                                 <li><a href="#">Mike John responded to your email</a></li>
                                 <li><a href="#">You have 5 new tasks</a></li>
                                 <li><a href="#">You're now friend with Andrew</a></li>
                                 <li><a href="#">Another Notification</a></li>
+                                <li><a href="#">Another One</a></li>
+                                <li><a href="#">Another One</a></li>
+                                <li><a href="#">Another One</a></li>
+                                <li><a href="#">Another One</a></li>
                                 <li><a href="#">Another One</a></li>
                             </ul>
                         </li>
@@ -131,13 +136,13 @@
 
                             <ul class="dropdown-menu" role="menu">
                                 <li>
-                                    <a href="user.html">
+                                    <a href="{{url('#')}}">
                                         <i class="material-icons">person</i> PERFIL
                                     </a>
                                 </li>
                                 <hr width="70%">
                                 <li>
-                                    <a id='salir' href="javascript:void(0)" class="btn btn-raised btn-danger"><i class="fa fa-power-off" aria-hidden="true"></i> Salir<div class="ripple-container"></div></a>
+                                    <a id='salir' href="javascript:void(0)" class="btn btn-raised btn-danger"><i class="fa fa-power-off" aria-hidden="true"></i>    Salir<div class="ripple-container"></div></a>
                                     <!--
                                     <a href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
@@ -157,7 +162,6 @@
 
                     </ul>
                     <!-- Aqui el buscardo-->
-
                 </div>
             </div>
         </nav>

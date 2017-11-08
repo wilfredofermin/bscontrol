@@ -51,6 +51,7 @@
                     <div class="brand">
                         BODYSHOP CONTROL
                     </div>
+
                 </div>
             </a>
         </div>

@@ -12,7 +12,7 @@
                     <div class="col-md-12">
                         <div class="card card-signup">
                         <div class="header header-primary text-center">
-                            <img src="{{asset('img/add-user.png')}}" width="24px" class="img-fluid" alt="Responsive image">
+                            <img src="{{asset('img/add-user.png')}}"  class="img-fluid" alt="Responsive image">
                             <h4>FORMULARIO DE REGISTRO</h4>
 
                         </div>

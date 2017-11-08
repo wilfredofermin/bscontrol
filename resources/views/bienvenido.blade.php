@@ -51,9 +51,14 @@
                     <div class="col-md-4">
                         <div class="info">
                             <div class="icon icon-primary">
-                                <i class="material-icons">chat</i>
+                                <i class="material-icons">business</i>
                             </div>
-                            <h4 class="info-title">Sistema administrativo</h4>
+                            <br>
+                            <span class="label label-default">CBS</span>
+                            <span class="label label-primary">SIMETRICA</span>
+                            <span class="label label-success">ABC SOFT.</span>
+                            <span class="label label-success">BSCONTROL</span>
+                            <h4 class="info-title">Administrativo</h4>
                             <p>Solicita los que necesites. Creacion de usuario, permisos,reportes y otros .</p>
 
                         </div>
@@ -63,6 +68,11 @@
                             <div class="icon icon-success">
                                 <i class="material-icons">important_devices</i>
                             </div>
+                            <br>
+                            <span class="label label-default">APLICACIONES</span>
+                            <span class="label label-primary">IT</span>
+                            <span class="label label-success">REDES</span>
+                            <span class="label label-success">HARDWARE</span>
                             <h4 class="info-title">Infraestructura IT</h4>
                             <p>Reporta inconvenientes con equipos,creacion de acceso de windows,correo electronico,telefonia, permisos a paginas web y otras asistencias.</p>
                         </div>
@@ -72,7 +82,11 @@
                             <div class="icon icon-danger">
                                 <i class="material-icons">fingerprint</i>
                             </div>
-                            <h4 class="info-title">Permiso de acceso</h4>
+                            <br>
+                            <span class="label label-default">LECTOR BIOMETRICO</span>
+                            <span class="label label-primary">ACCESOS</span>
+                            <span class="label label-success">SERVICIOS</span>
+                            <h4 class="info-title">Permisos</h4>
                             <p>Podras reportar todo incovenientes relacionado con el acceso mediante al sistema de verificacion.</p>
                         </div>
                     </div>
