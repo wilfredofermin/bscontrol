@@ -58,13 +58,12 @@
         <div class="sidebar-wrapper">
 
             <ul class="nav">
-                <li class="active">
+                <li class="@yield('home','active')">
                     <a href="{{url('/home')}}">
                         <i class="material-icons">dashboard</i>
                         <p>Dashboard</p>
                     </a>
-                </li>
-                <li>
+                <li class="@yield('solicitud')">
                     <a href="{{url('/home/solicitud')}}">
                         <i class="material-icons">assignment_turned_in</i>
                         <p>Solicitudes</p>
