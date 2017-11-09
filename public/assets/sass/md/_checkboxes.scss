@@ -1,3 +1,6 @@
+.form-group {
+}
+
 .checkbox {
   label {
     cursor: pointer;
@@ -37,7 +40,7 @@
       z-index: 1;
       opacity: 0;
       margin: 0;
-      @include transform-scale3d(unquote('2.3,2.3,1'));
+      transform: scale3d(2.3, 2.3, 1);
     }
 
     .check {
@@ -53,7 +56,7 @@
     .check:before {
       position: absolute;
       content: "";
-      @include rotate();
+      transform: rotate(45deg);
       display: block;
       margin-top: -3px;
       margin-left: 7px;
@@ -68,7 +71,7 @@
         0 0 0 0,
         0 0 0 0,
         0 0 0 0 inset;
-      @include animation(checkbox-off $mdb-checkbox-animation-check forwards);
+      animation: checkbox-off $mdb-checkbox-animation-check forwards;
     }
   }
 
@@ -92,26 +95,26 @@
         0px 32px 0 20px,
         -5px 5px 0 10px,
           20px -12px 0 11px;
-        @include animation(checkbox-on $mdb-checkbox-animation-check forwards);
+        animation: checkbox-on $mdb-checkbox-animation-check forwards;
       }
 
       & + .checkbox-material:before {
-        @include animation(rippleOn $mdb-checkbox-animation-ripple);
+        animation: rippleOn $mdb-checkbox-animation-ripple;
       }
 
       & + .checkbox-material .check:after {
         //background-color: $brand-success; // FIXME: seems like tho wrong color, test and make sure it can be removed
-        @include animation(rippleOn $mdb-checkbox-animation-ripple forwards); // Ripple effect on check
+        animation: rippleOn $mdb-checkbox-animation-ripple forwards; // Ripple effect on check
       }
     }
 
     &:not(:checked) {
       & + .checkbox-material:before {
-        @include animation(rippleOff $mdb-checkbox-animation-ripple);
+        animation: rippleOff $mdb-checkbox-animation-ripple;
       }
 
       & + .checkbox-material .check:after {
-        @include animation(rippleOff $mdb-checkbox-animation-ripple); // Ripple effect on uncheck
+        animation: rippleOff $mdb-checkbox-animation-ripple; // Ripple effect on uncheck
 
       }
     }

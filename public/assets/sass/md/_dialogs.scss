@@ -8,7 +8,7 @@
   @include shadow-z-5();
   border-radius: $border-radius-large;
   border: none;
-  // modal header
+  // Modal header
   // Top section of the modal w/ title and dismiss
   .modal-header {
     border-bottom: none;
@@ -17,7 +17,7 @@
     padding-bottom: 0;
     padding-left:   24px;
   }
-  // modal body
+  // Modal body
   // Where all modal content resides (sibling of .modal-header and .modal-footer)
   .modal-body {
     padding-top:    24px;

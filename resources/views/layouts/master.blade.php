@@ -140,7 +140,7 @@
 <script src="{{asset('js/bootstrap-select.min.js')}}" type="text/javascript"></script>
 
 <!-- Inimodalodal -->
-@inclmodalmodal.acceso')
+@include('modal.acceso')
 @include('modal.registrate')
 @include('modal.tutorial')
         <!-- Fin Modal -->
