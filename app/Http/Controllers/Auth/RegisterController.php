@@ -40,7 +40,7 @@ class RegisterController extends Controller
     }
 
     /**
-     * Get a validator for an incoming registration request.
+     * Get a validator for an incoming registration solicitudes.
      *
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator

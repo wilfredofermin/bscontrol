@@ -28,6 +28,9 @@
     <!-- SweetAlert2 |https://cdn.jsdelivr.net/sweetalert2/6.6.2/sweetalert2.css -->
     <link rel="stylesheet" href="{{asset('css/sweetalert2.css')}}">
 
+    <link rel="stylesheet" href="{{asset('css/button-float.css')}}">
+
+
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>

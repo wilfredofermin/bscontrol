@@ -112,6 +112,6 @@
              </div>
         </div>
     </div>
-
+@include('solicitudes.include.button-float')
 @endsection
 
