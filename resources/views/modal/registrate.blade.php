@@ -1,14 +1,13 @@
 <div class="modal fade" id="myModalRegistro" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
     <div class="modal-dialog ">
-            <div class="modal-body">
-                <form class="form" method="POST" action="{{ route('register') }}">
-                    {{ csrf_field() }}
-                    <div class="col-md-12">
-                        <div class="card card-signup">
+        <div class="modal-body">
+            <form class="form" method="POST" action="{{ route('register') }}">
+                {{ csrf_field() }}
+                <div class="col-md-12">
+                    <div class="card card-signup">
                         <div class="header header-primary text-center">
                             <img src="{{asset('img/add-user.png')}}"  class="img-fluid" alt="Responsive image">
-                            <h4>FORMULARIO DE REGISTRO</h4>
-
+                            <h4>BSCONTROL - REGISTRO</h4>
                         </div>
                         <div class="content">
 
@@ -16,7 +15,7 @@
                                 <span class="input-group-addon">
                                     <i class="material-icons">face</i>
                                 </span>
-                                <div class="form-group is-empty"><input type="text" class="form-control" placeholder=" Nombre completo..." name="name" value="{{ old('name') }}" required><span class="material-input"></span></div>
+                                <div class="form-group is-empty"><input type="text" id="myNonmbre" class="form-control" placeholder=" Nombre completo..." name="name" value="{{ old('name') }}" required><span class="material-input"></span></div>
                             </div>
                             <div class="input-group">
                                 <span class="input-group-addon">
@@ -56,16 +55,15 @@
                                     @endforeach
                                 </select>
                             </div>
-                        </div>
-                            <div  class="footer text-center">
-                                <button type="submit"  class="btn btn-primary btn-raised">
-                                    <i class="material-icons">done</i> ACCESAR
-                                </button>
+                            <div align="center">
+                                <button type="submit"  class="btn btn-primary btn-raised"><i class="material-icons">done</i> ACCESAR</button>
+                                {{--Linia de division--}}
                             </div>
-                            <div align="right"> <button type="button" class="btn btn-danger btn-simple" data-dismiss="modal">Cerrar</button></div>
+                            <div align="right"><button type="button" class="btn btn-danger btn-simple" data-dismiss="modal">Cerrar</button></div>
                         </div>
                     </div>
-                </form>
-            </div>
+                </div>
+            </form>
+        </div>
     </div>
 </div>

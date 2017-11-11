@@ -10,35 +10,32 @@
 
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
     <meta name="viewport" content="width=device-width">
-
     <!-- Bootstrap core CSS     -->
     <link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet">
-
     <!--  Material Dashboard CSS    -->
     <link href="{{asset('assets/css/material-dashboard.css?v=1.2.0')}}" rel="stylesheet">
-
-    <!-- CSS Files -->
-    <link href="{{asset('assets/css/material-bootstrap-wizard.css')}}" rel="stylesheet" />
-
+    <!--  CSS for Demo Purpose, don't include it in your project     -->
+    <link href="{{asset('assets/css/demo.css')}}" rel="stylesheet">
     <!-- SweetAlert2 |https://cdn.jsdelivr.net/sweetalert2/6.6.2/sweetalert2.css -->
     <link rel="stylesheet" href="{{asset('css/sweetalert2.css')}}">
+
+    <!--CSS MATERIAL WINZARD-->
+    <link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet" />
+    <link href="{{asset('assets/css/material-bootstrap-wizard.css')}}" rel="stylesheet" />
 
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link href="http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons" rel="stylesheet" type="text/css">
 
-    <!--     Fonts and icons     -->
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
-
-
-
     <!-- SweetAlert2 |https://cdn.jsdelivr.net/sweetalert2/6.6.2/sweetalert2.css -->
     <link rel="stylesheet" href="{{asset('css/sweetalert2.css')}}">
 
-    <!-- Boton flotante  -->
     <link rel="stylesheet" href="{{asset('css/button-float.css')}}">
 
+
+    <!--     Fonts and icons     -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
@@ -125,6 +122,7 @@
                                         <i class="material-icons">person</i> PERFIL
                                     </a>
                                 </li>
+                                {{--Linia de division--}}
                                 <hr width="70%">
                                 <li>
                                     <a id='salir' href="javascript:void(0)" class="btn btn-raised btn-danger"><i class="fa fa-power-off" aria-hidden="true"></i>    Salir<div class="ripple-container"></div></a>
@@ -166,22 +164,31 @@
                 </div>
             </div>
         </div>
-    </div>
-</div>
 
+    </div>
+
+</div>
+@include('modal.add_solicitud')
 </body>
 
 <!--   Core JS Files   -->
 <script src="{{asset('assets/js/jquery-3.1.0.min.js')}}" type="text/javascript"></script>
 <script src="{{asset('assets/js/bootstrap.min.js')}}" type="text/javascript"></script>
 <script src="{{asset('assets/js/material.min.js')}}" type="text/javascript"></script>
-<script src="{{asset('assets/js//jquery.bootstrap.js')}}" type="text/javascript"></script>
+<script src="{{asset('assets/js/jquery.bootstrap.js')}}" type="text/javascript"></script>
+
+<!--  Charts Plugin -->
+<script src="{{asset('assets/js/chartist.min.js')}}"></script>
+
+<!--  Google Maps Plugin    -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
 
 <!--  Notifications Plugin    -->
 <script src="{{asset('assets/js/bootstrap-notify.js')}}"></script>
-
-<!--  Plugin for the Wizard -->
-<script src="{{asset('assets/js/material-bootstrap-wizard.js')}}"></script>
+<!--  Dynamic Elements plugin -->
+<script src="{{asset('assets/js/arrive.min.js')}}"></script>
+<!--  PerfectScrollbar Library -->
+<script src="{{asset('assets/js/perfect-scrollbar.jquery.min.js')}}"></script>
 
 <!--  Google Maps Plugin    -->
 {{--SweeAlert2 | https://cdn.jsdelivr.net/sweetalert2/6.6.2/sweetalert2.js --}}
@@ -190,8 +197,36 @@
 <!-- Material Dashboard javascript methods -->
 <script src="{{asset('assets/js/material-dashboard.js')}}"></script>
 
+
+<!--  Plugin for the Wizard -->
+<script src="{{asset('assets/js/material-bootstrap-wizard.js')}}"></script>
+
 <!--  More information about jquery.validate here: http://jqueryvalidation.org/	 -->
 <script src="{{asset('assets/js/jquery.validate.min.js')}}"></script>
 
+<!-- Material Dashboard DEMO methods, don't include it in your project! -->
+<script src="{{asset('assets/js/demo.js')}}"></script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+
+        // Javascript method's body can be found in assets/js/demos.js
+        demo.initDashboardPageCharts();
+
+    });
+</script>
+<script>
+    $(function () {
+        $('#select-category').on('change', onSelectCategoryChange);
+    });
+    function onSelectCategoryChange() {
+        var category_id=$(this).val();
+        alert(category_id);
+
+        // AJAX
+
+    }
+</script>
 
 </html>
+

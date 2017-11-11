@@ -18,6 +18,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/', 'BienvenidoController@index');
 
-Route::get('/home/solicitud/create', 'homecontroller@show');
+Route::get('/home/solicitud', 'HomeController@show');
 
-Route::get('/home/solicitud', 'homecontroller@solicitud');

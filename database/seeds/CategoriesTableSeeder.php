@@ -18,7 +18,7 @@ class CategoriesTableSeeder extends Seeder
         ]);
         Category::create([
             'estado'=>1,
-            'name'=>'Permisos',
+            'name'=>'Mantenimiento',
         ]);
 
     }
