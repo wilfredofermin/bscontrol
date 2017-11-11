@@ -30,6 +30,15 @@
 
     <!-- Bootstrap Select Dropdown -->
     <link href="{{asset('css/bootstrap-select.min.css')}}" rel="stylesheet"/>
+    <!--
+    <!-- CSS Files
+    <link href="{{asset('assets/css/material-bootstrap-wizard.css')}}" rel="stylesheet" />
+    <!--  Crediitos
+    <a href="https://wilfredofermin.github.io" class="made-with-mk">
+        <div class="brand">WF</div>
+        <div class="made-with">Developers >_ <strong> RD&copy</strong> </div>
+    </a>
+    -->
 <body class="@yield('class-page')">
 
 

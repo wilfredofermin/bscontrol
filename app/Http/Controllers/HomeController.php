@@ -25,4 +25,12 @@ class HomeController extends Controller
     {
         return view('home');
     }
+    public function show (){
+
+        return view('solicitudes.create');
+    }
+    public function solicitud (){
+
+        return view('solicitudes.index');
+    }
 }

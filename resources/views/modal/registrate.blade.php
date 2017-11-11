@@ -1,11 +1,5 @@
 <div class="modal fade" id="myModalRegistro" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
     <div class="modal-dialog ">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                    <i class="material-icons">clear</i>
-                </button>
-            </div>
             <div class="modal-body">
                 <form class="form" method="POST" action="{{ route('register') }}">
                     {{ csrf_field() }}
@@ -63,20 +57,15 @@
                                 </select>
                             </div>
                         </div>
-                        <div  class="footer text-center">
-                            <button type="submit"  class="btn btn-primary btn-raised">
-                                <i class="material-icons">done</i> ACCESAR
-                            </button>
+                            <div  class="footer text-center">
+                                <button type="submit"  class="btn btn-primary btn-raised">
+                                    <i class="material-icons">done</i> ACCESAR
+                                </button>
+                            </div>
+                            <div align="right"> <button type="button" class="btn btn-danger btn-simple" data-dismiss="modal">Cerrar</button></div>
                         </div>
-                        </div>
-
                     </div>
                 </form>
             </div>
-            <div class="modal-footer">
-                <!--<button type="button" class="btn btn-default btn-simple">Nice Button</button>-->
-                <button type="button" class="btn btn-danger btn-simple" data-dismiss="modal">Cerrar</button>
-            </div>
-        </div>
     </div>
 </div>
