@@ -53,8 +53,8 @@
 
                                                 <div class="col-sm-6">
                                                     <div class="input-group">
-                                                    <span class="input-group-addon">
-                                                    </span>
+                                            <span class="input-group-addon">
+                                            </span>
                                                         <div class="form-group label-floating">
                                                             <label class="control-label">Area de referencia</label>
                                                             <input name="area" type="text" class="form-control">

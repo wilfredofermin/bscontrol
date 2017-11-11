@@ -76,12 +76,10 @@
                                 <i class="material-icons">person_add</i> Registrate
                             </a>
                             -->
-                            @endauth
+                        @endauth
                     </div>
                 @endif
             </ul>
-
-
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
