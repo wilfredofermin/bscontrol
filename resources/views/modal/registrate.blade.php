@@ -40,7 +40,7 @@
                                    <i class="material-icons"rel="tooltip" title=Sucursal data-placement="bottom" data-html="true" >store</i>
                                 </span>
                                 <select class="selectpicker" name="sucursal" data-style="btn-btn-info" data-width="100%">
-                                        @foreach($subsidiaries as $sucursal)
+                                        @foreach($sucursales as $sucursal)
                                             <option value="{{$sucursal->name}}">{{$sucursal->name}}</option>
                                         @endforeach
                                  </select>

@@ -27,7 +27,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/home/solicitud';
 
     /**
      * Create a new controller instance.
@@ -71,4 +71,11 @@ class RegisterController extends Controller
             'password' => bcrypt($data['password']),
         ]);
     }
+    /*
+    public function redirecPatch(){
+        if (auth()->user()->rol=0){
+            return view('/home/solicitud');
+        }
+    }
+    */
 }

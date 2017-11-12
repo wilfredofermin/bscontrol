@@ -19,7 +19,7 @@
                                         <div class="wizard-navigation">
                                             <ul>
                                                 <li><a href="#info" data-toggle="tab">Ubicacion</a></li>
-                                                <li><a href="#tipo" data-toggle="tab">Tipo de solicitud</a></li>
+                                                <li><a href="#tipo" data-toggle="tab">Solicitud</a></li>
                                                 <li><a href="#description" data-toggle="tab">Descripcion Extras</a></li>
                                             </ul>
                                         </div>
@@ -33,19 +33,19 @@
                                                     <div class="col-sm-6">
                                                         <div class="form-group label-floating">
                                                             <label class="control-label">Ubicacion</label>
-                                                            <select class="form-control">
-                                                                <option value="naco"> Naco </option>
-                                                                <option value="bv"> Bella Vista </option>
-                                                                <option value="ah"> Arroyo Hondo </option>
-                                                                <option value="sti"> Santiago </option>
+                                                            <select name="" class="form-control" >
+                                                                @foreach($sucursales as $sucursal)
+                                                                    <option value="{{$sucursal->id}}">{{$sucursal->name}}</option>
+                                                                @endforeach
                                                             </select>
                                                         </div>
 
                                                         <div class="form-group label-floating">
-                                                            <label class="control-label">Tipo de equipo</label>
-                                                            <select class="form-control">
-                                                                <option value="Informatico">Informatico</option>
-                                                                <option value="Electronico">Mantenimiento</option>
+                                                            <label class="control-label">Tipo de servicio</label>
+                                                            <select name="" class="form-control" id="select-category">
+                                                                @foreach($categories as $categoria)
+                                                                    <option value="{{$categoria->id}}">{{$categoria->name}}</option>
+                                                                @endforeach
                                                             </select>
                                                         </div>
                                                     </div>
@@ -60,12 +60,11 @@
                                                             </div>
                                                         </div>
                                                         <div class="form-group label-floating">
-                                                            <label class="control-label">Condicion</label>
+                                                            <label class="control-label">Nivel de urgencia</label>
                                                             <select class="form-control">
-                                                                <option value="pc"> Nuevo</option>
-                                                                <option value="laptop"> Usuado </option>
-                                                                <option value="Movil"> En mal estado </option>
-                                                                <option value="Movil"> Otros </option>
+                                                                <option value="pc"> Normal</option>
+                                                                <option value="laptop">Bajo</option>
+                                                                <option value="Movil">Alto</option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -77,9 +76,9 @@
                                                     <div class="col-sm-6">
                                                         <div class="form-group label-floating">
                                                             <label class="control-label">Categoria</label>
-                                                            <select name="" class="form-control" id="select-category">
-                                                                @foreach($categories as $category)
-                                                                    <option value="{{$category->id}}">{{$category->name}}</option>
+                                                            <select name="" class="form-control" >
+                                                                @foreach($sucursales as $sucursal)
+                                                                    <option value="{{$sucursal->id}}">{{$sucursal->name}}</option>
                                                                 @endforeach
                                                             </select>
                                                         </div>
@@ -151,11 +150,11 @@
                                         </div>
                                         <div class="wizard-footer">
                                             <div class="pull-right">
-                                                <input type='button' class='btn btn-next btn-fill btn-primary btn-wd'  value='Proximo' />
+                                                <input type='button' class='btn btn-next btn-fill btn-primary btn-wd'  value='Proximo'/>
                                                 <input type='button' class='btn btn-finish btn-fill btn-success btn-wd'  value='Finalizado' />
                                             </div>
                                             <div class="pull-left">
-                                                <input type='button' class='btn btn-previous btn-fill btn-default btn-wd' value='Anterior' />
+                                                <input type='button' class='btn btn-previous btn-fill btn-default btn-wd' value='< Anterior' />
 
                                             </div>
                                             <div class="clearfix"></div>
