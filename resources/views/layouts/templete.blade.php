@@ -176,15 +176,8 @@
 <!--  Charts Plugin -->
 <script src="{{asset('assets/js/chartist.min.js')}}"></script>
 
-<!--  Google Maps Plugin    -->
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
-
 <!--  Notifications Plugin    -->
 <script src="{{asset('assets/js/bootstrap-notify.js')}}"></script>
-<!--  Dynamic Elements plugin -->
-<script src="{{asset('assets/js/arrive.min.js')}}"></script>
-<!--  PerfectScrollbar Library -->
-<script src="{{asset('assets/js/perfect-scrollbar.jquery.min.js')}}"></script>
 
 <!--  Google Maps Plugin    -->
 {{--SweeAlert2 | https://cdn.jsdelivr.net/sweetalert2/6.6.2/sweetalert2.js --}}
@@ -200,27 +193,23 @@
 <!--  More information about jquery.validate here: http://jqueryvalidation.org/	 -->
 <script src="{{asset('assets/js/jquery.validate.min.js')}}"></script>
 
-<!-- Material Dashboard DEMO methods, don't include it in your project! -->
-<script src="{{asset('assets/js/demo.js')}}"></script>
-
-<script type="text/javascript">
-    $(document).ready(function(){
-
-        // Javascript method's body can be found in assets/js/demos.js
-        demo.initDashboardPageCharts();
-
-    });
-</script>
 <script>
     $(function () {
-        $('#select-category').on('change', onSelectCategoryChange);
+        $('#select-tipo').on('change', onSelectTipoChange);
+
     });
-    function onSelectCategoryChange() {
+    function onSelectTipoChange() {
+        //Aqui tengo el ID del tipo
         var category_id=$(this).val();
-        alert(category_id);
 
         // AJAX
-
+        $.get('/home/solicitud/'+category_id+'/category',function(data){
+            var html_select='<option value="">Selectione la categoria</option>';
+            for (var i=0;i<data.length;++i)
+                html_select +='<option value="'+data[i].id+'">'+data[i].name+'</option>';
+           // console.log(html_select);
+            $('#select-category').html(html_select);
+        });
     }
 </script>
 

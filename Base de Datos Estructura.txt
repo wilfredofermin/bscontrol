@@ -1,0 +1,44 @@
+
+Servicios 
+	-
+
+<OPCION>
+SERVICIO:
+	-Informatico(1)
+	-Servicios Generales(2)
+	-Operaciones(3)
+
+CATEGORIA - Informatico (1)
+	-Programas(1)
+	-Infraestrucura(2)
+	-Equipos(3)
+
+SUBCATEGORIA- Informatico
+
+	-Programas(1)
+			-CBS
+			-SIMETRICA
+			-ABC SOFTWARE
+	-Infraestrucura(2)
+			-INTERNET
+			-REDES
+			-TELEFONIA			
+			
+			
+			
+	-Equipos(3)
+			-PC
+			-LAPTOP
+			-IMPRESORA	
+			-MONITOR
+		
+
+
+CATEGORIA - Servicios Generales(2)
+			-PLOMERIA
+			-ELECTRICIDAD	
+			-LUCES
+			
+		-Operaciones
+			-CONSERJE
+			-SERVICIO

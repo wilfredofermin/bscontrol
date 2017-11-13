@@ -20,17 +20,15 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/', 'BienvenidoController@index');
 
+//Route::get('/login', 'BienvenidoController@index');
+
 Route::get('/home/solicitud', 'HomeController@show');
 
-Route::filter('/home', function(){
-    if(Auth::guest()){
-        return Redirect::route('login');
-    }else{
-        //cambiar caja de ahorro por rol de administrador
-        if(Auth::user()->roll != 1)
-        {
-            return Redirect::to('/home/solicitud')->with('danger','No puedes acceder a esa seccion');
-        }
-    }
+
+Route::get('/home/solicitud/{id}/category', 'HomeController@byCategory');
+
+Route::group(['middleware'=>'admin','namespace'=>'Admin'],function(){
+
+   // Route::get('category/{id}/subcategoy','SubCategoryController@byCategory');
 });
 

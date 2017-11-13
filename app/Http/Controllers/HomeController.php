@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Category;
 use App\Gerenica;
+use App\Service;
 
 class HomeController extends Controller
 {
@@ -36,7 +37,15 @@ class HomeController extends Controller
             ->where('tipo',1)
             ->get();
 
+        $services=Service::where('estado',1)->get();
+
         $categories=Category::all();
-        return view('solicitudes.index')->with(compact('categories','sucursales'));
+        return view('solicitudes.index')->with(compact('categories','sucursales','services'));
     }
+
+    public function byCategory($id){
+
+        return Category::where('service_id',$id)->get();
+    }
+
 }

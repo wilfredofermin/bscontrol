@@ -40,11 +40,12 @@
                                                             </select>
                                                         </div>
 
-                                                        <div class="form-group label-floating">
+                                                        <div class="form-group">
                                                             <label class="control-label">Tipo de servicio</label>
-                                                            <select name="" class="form-control" id="select-category">
-                                                                @foreach($categories as $categoria)
-                                                                    <option value="{{$categoria->id}}">{{$categoria->name}}</option>
+                                                            <select name="" class="form-control" id="select-tipo">
+                                                                <option value="">--Tipo de servicio--</option>
+                                                                @foreach($services as $service)
+                                                                    <option value="{{$service->id}}">{{$service->name}}</option>
                                                                 @endforeach
                                                             </select>
                                                         </div>
@@ -56,10 +57,10 @@
                                                     </span>
                                                             <div class="form-group label-floating">
                                                                 <label class="control-label">Area de referencia</label>
-                                                                <input name="area" type="text" class="form-control">
+                                                                <input name="area" type="text" class="form-control" required >
                                                             </div>
                                                         </div>
-                                                        <div class="form-group label-floating">
+                                                        <div class="form-group">
                                                             <label class="control-label">Nivel de urgencia</label>
                                                             <select class="form-control">
                                                                 <option value="pc"> Normal</option>
@@ -74,17 +75,15 @@
                                             <div class="tab-pane" id="tipo">
                                                 <div class="row">
                                                     <div class="col-sm-6">
-                                                        <div class="form-group label-floating">
+                                                        <div class="form-group">
                                                             <label class="control-label">Categoria</label>
-                                                            <select name="" class="form-control" >
-                                                                @foreach($sucursales as $sucursal)
-                                                                    <option value="{{$sucursal->id}}">{{$sucursal->name}}</option>
-                                                                @endforeach
+                                                            <select name="" class="form-control" id="select-category" >
+                                                                <option value="">--</option>
                                                             </select>
                                                         </div>
                                                     </div>
                                                     <div class="col-sm-6">
-                                                        <div class="form-group label-floating">
+                                                        <div class="form-group">
                                                             <label class="control-label">Sub Categoria</label>
                                                             <select name="" class="form-control" id="select-subcategory">
                                                                 <option value="pc"> PC </option>

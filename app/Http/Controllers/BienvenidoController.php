@@ -17,7 +17,12 @@ class BienvenidoController extends Controller
                                 ->where('tipo',1)
                                 ->get();
 
-       // dd($sucursles);
+        //dd($sucursales);
         return view('bienvenido')->with(compact('departaments','sucursales'));
     }
+
+    public function redirect(){
+        return redirect('/bienvenido');
+    }
+
 }
